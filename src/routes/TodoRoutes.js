@@ -1,21 +1,21 @@
 import express from 'express';
-import CourseController from '../controllers/CourseController';
+import TodosController from '../controllers/TodosController.js';
 
 const {
   add,
   edit,
-  fetchAll,
-  fetchById,
+  getAll,
+  getById,
   remove
-} = CourseController;
+} = TodosController;
 
 const router = express.Router();
 
 /*
-  Course routes
+  Todos routes
  */
-router.get('/', fetchAll);
-router.get('/:id', fetchById);
+router.get('/', getAll);
+router.get('/:id', getById);
 router.post('/', add);
 router.patch('/:id', edit);
 router.delete('/:id', remove);
