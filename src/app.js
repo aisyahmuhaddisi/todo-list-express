@@ -2,6 +2,7 @@ import mongoose from 'mongoose';
 import express from 'express';
 import http from 'http';
 import { config } from 'dotenv';
+import cors from 'cors'
 // import errorHandler from './middlewares/ErrorHandler';
 import todoRoutes from './routes/TodoRoutes.js';
 // import loggerHandler from './middlewares/LoggerHandler';
@@ -10,6 +11,7 @@ config()
 
 const app = express();
 
+app.use(cors())
 app.use(express.json());
 
 app.use('/todos', todoRoutes);

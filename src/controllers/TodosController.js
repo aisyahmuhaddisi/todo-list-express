@@ -16,7 +16,7 @@ const {
 class TodosController {
   static getAll = async (req, res, next) => {
     try {
-      const todos = await getAll();
+      const todos = await getAll(req.query);
 
       res.status(200);
       res.json({

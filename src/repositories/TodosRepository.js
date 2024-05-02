@@ -5,8 +5,8 @@ import Todos from '../models/Todos.js';
   Todos repository
  */
 class TodosRepository {
-  static getAll = async () => {
-    return await Todos.find()
+  static getAll = async (query) => {
+    return await Todos.find(query)
   };
 
   static getById = async (todosId) => {

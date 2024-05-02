@@ -18,8 +18,8 @@ const {
   Todos service
  */
 class TodosService {
-  static getAll = async () => {
-    return await getAll();
+  static getAll = async (query) => {
+    return await getAll(query);
   };
 
   static getById = async (id) => {
